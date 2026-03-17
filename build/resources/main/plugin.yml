@@ -1,0 +1,20 @@
+name: Telegram2FALogin
+version: '1.2'
+main: com.mrfenek.telegram2FALogin.Telegram2FALogin
+api-version: '1.21'
+prefix: TG-2FA
+load: STARTUP
+authors: [ mrfenek ]
+description: A simple plugin to approve your join from Telegram, best used to protect OP accounts when using AuthMe or other auth plugins
+permissions:
+  telegram2falogin.use:
+    description: Allow use of /tg2fa link
+    default: true
+  telegram2falogin.admin:
+    description: Allow use of /tg2fa reload and /tg2fa config
+    default: op
+commands:
+  tg2fa:
+    description: Main command for Telegram2FALogin
+    usage: /tg2fa <link|settings|config|reload>
+    aliases: [tg, telegram, tg2falogin]

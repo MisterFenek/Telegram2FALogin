@@ -1,0 +1,52 @@
+# Telegram2FALogin Configuration File
+# ---------------------------------------------------------
+# This plugin provides 2FA security for Minecraft using Telegram.
+# It protects OP accounts and can notify admins about server events.
+
+# Telegram Bot Token (REQUIRED)
+# You can get this by chatting with @BotFather on Telegram.
+# Use the /newbot command and follow instructions.
+bot-token: "YOUR_BOT_TOKEN_HERE"
+
+# Telegram Owner ID (Superuser, overrides all)
+# This ID has full access to the bot regardless of permissions.
+# You can get your ID from @userinfobot or similar bots.
+owner-id: 0
+
+# Telegram Admin IDs for monitoring and RCON access
+# List of IDs that can manage the bot and receive notifications.
+# Example: admin-ids: [123456789, 987654321]
+admin-ids: []
+
+# Default Language for the plugin
+# Supported languages: en (English), ru (Russian)
+# This will determine which messages_*.yml file to use.
+language: en
+
+# 2FA mode for Operators (OPs): always, session, whitelist, disabled
+# always: Approval is required for every login attempt (highest security).
+# session: Approval is remembered for the duration of session-expiry-hours.
+# whitelist: Approval is permanent for the IP address until manual removal.
+# disabled: 2FA is disabled for OPs by default (not recommended).
+op-2fa-mode: session
+
+# 2FA mode for non-OP players who have linked their account: always, session, whitelist, disabled
+# This applies to regular players who use /tg2fa link.
+# Default: disabled
+non-op-2fa-mode: disabled
+
+# Session expiry in hours (only for 'session' mode)
+# After this period, the player must re-approve their login from Telegram.
+session-expiry-hours: 12
+
+# Enable RCON access via Telegram for admins
+# If true, admins can run console commands directly from the bot.
+rcon-enabled: true
+
+# Restrict bot to private chats only (Highly recommended for security)
+# If true, the bot will ignore any commands or messages from group chats.
+private-only: true
+
+# Enable debug outputs in the console
+# Use this if you have issues with the plugin to see more detailed logs.
+debug: false

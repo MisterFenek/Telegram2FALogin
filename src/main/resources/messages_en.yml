@@ -1,0 +1,251 @@
+# Telegram2FALogin Messages Configuration (English)
+# ---------------------------------------------------------
+# Note: You can use HTML tags like <b>, <i>, <code>, etc. in Telegram messages.
+# Special placeholders are listed below each message.
+
+# --- Minecraft (In-Game) Messages ---
+
+# Message shown when an IP is blacklisted and the player tries to join.
+kick-blacklisted: "Your IP is blacklisted!"
+
+# Message shown when an OP account is not linked to Telegram.
+# %code% - Link code for the player.
+kick-unlinked: "OP protection is active! Your account is not linked to Telegram. \n\nSend this code to the bot: %code% \nUse command: /mclink %code%"
+
+# Message shown when a 2FA check is pending.
+kick-2fa: "2FA check! Open Telegram to approve your login."
+
+# Usage for the /tg2fa settings command.
+mc-settings-usage: "Usage: /tg2fa settings <mode> (always|session|whitelist|disabled)"
+
+# Response for /tg2fa settings success.
+# %mode% - The new mode set.
+mc-settings-updated: "✅ Your 2FA mode has been updated to %mode%"
+
+# Response for /tg2fa settings with an invalid mode.
+mc-settings-invalid-mode: "❌ Invalid mode! Use: always, session, whitelist, disabled"
+
+# Usage for the main plugin command.
+tg-usage: "Usage: /tg2fa <link|settings|config|reload>"
+
+# Message for players without permission to use the command.
+tg-no-permission: "❌ You do not have permission to use this command."
+
+# Message shown after /tg2fa link.
+# %code% - Link code for the player.
+mc-link-code: "Your link code is: %code%. Send it to the Telegram bot."
+
+# Response for /tg2fa link when the account is already linked.
+mc-already-linked: "Your account is already linked to Telegram."
+
+# Message sent to the player when a message is received from Telegram admin.
+# %message% - The message text.
+mc-msg-format: "[Console -> You] %message%"
+
+# Error for non-player command execution.
+mc-player-only: "This command can only be used by players!"
+
+# Error when setting config fails.
+# %error% - The error message.
+mc-config-error: "❌ Error setting config: %error%"
+
+# Reason used in Minecraft kick messages triggered by bot.
+mc-kick-reason: "Kicked by Telegram Admin"
+
+# Reason used in Minecraft ban messages triggered by bot.
+mc-ban-reason: "Banned by Telegram Admin"
+
+
+# --- Telegram (Bot) Messages ---
+
+# Notification when an OP joins.
+# %player% - Player name.
+tg-admin-join: "👤 Player Join: %player% (OP)"
+
+# Notification when an OP quits.
+tg-admin-quit: "👋 Player Quit: %player% (OP)"
+
+# Notification when an OP issues a command.
+# %command% - Command issued.
+tg-admin-cmd: "💻 Command: %player% issued %command%"
+
+# Alert when someone tries to join from a blacklisted IP.
+# %ip% - IP address.
+tg-admin-blacklist-attempt: "🚫 Blacklisted IP join attempt: %player% (%ip%)"
+
+# Alert when an unlinked OP tries to join.
+tg-admin-unlinked-attempt: "⚠️ Unlinked OP join attempt: %player% (%ip%)"
+
+# The 2FA prompt sent to the bot when someone tries to log in.
+tg-2fa-prompt: "🔑 Login attempt from IP: %ip%\n\nPlayer: %player%"
+
+# Confirmation after approving a login.
+tg-approved: "✅ IP %ip% approved for %player%"
+
+# Notification after denying a login.
+tg-denied: "❌ Login denied for %ip%"
+
+# Confirmation after blacklisting an IP.
+tg-blacklisted: "🚫 IP %ip% has been blacklisted for player %player%"
+
+# Header for managing a player via bot.
+tg-manage-player: "Managing player: %player%"
+
+# Success message after kicking a player.
+tg-kicked: "✅ Kicked %player%"
+
+# Error when trying to manage an offline player.
+tg-not-online: "❌ Player not online."
+
+# Success message after banning a player.
+tg-banned: "✅ Banned %player%"
+
+# Prompt when admin wants to send a message to a player.
+tg-msg-prompt: "Please type the message to send to %player%:"
+
+# Confirmation that a message was sent to Minecraft.
+tg-msg-sent: "✅ Message sent to %player%"
+
+# Message when there are no players on the server.
+tg-no-players: "No players online."
+
+# Header for player selection menu.
+tg-select-player: "Select a player to manage:"
+
+# Message when a bot interaction is cancelled.
+tg-cancelled: "✅ Interaction cancelled."
+
+# Message when an account is successfully linked.
+tg-linked: "✅ Your account has been linked to Minecraft player: %player%"
+
+# Error when a non-admin tries to use admin-only commands.
+tg-unauthorized: "🚫 You are not authorized to run RCON commands."
+
+# Usage message for /rcon.
+tg-rcon-usage: "Usage: /rcon &lt;command&gt;"
+
+# Usage message for /mclink.
+tg-mclink-usage: "Usage: /mclink &lt;code&gt;"
+
+# Error for expired or invalid link codes.
+tg-invalid-code: "❌ Invalid or expired code."
+
+# Notification for server start.
+tg-server-start: "🚀 Server started!"
+
+# Notification for server stop.
+tg-server-stop: "🛑 Server stopped!"
+
+# Error for unauthorized config changes.
+tg-unauthorized-config: "❌ You are not authorized to edit config."
+
+# Usage message for the bot config command.
+# %path% - The config path.
+# %value% - The config value.
+tg-config-usage: "Usage: /tg2fa config <path> <value>"
+
+# Confirmation for config updates.
+tg-config-updated: "✅ Config %path% set to %value%"
+
+# Confirmation after /tg2fa reload.
+tg-reloaded: "✅ Plugin configuration and messages reloaded."
+
+# Header for the 2FA settings menu for a player.
+tg-2fa-settings-menu: "2FA Settings for %player%:"
+
+# Header for the global default 2FA settings menu.
+tg-default-2fa-menu: "Default 2FA Settings (for OPs/New Players):"
+
+# Label for current 2FA mode.
+tg-2fa-mode-current: "Current mode: %mode%"
+
+# Confirmation after updating 2FA mode for a player.
+tg-2fa-mode-updated: "✅ 2FA mode for %player% has been updated to %mode%"
+
+# Header for the bot settings menu.
+tg-settings-menu: "Notification Settings:"
+
+# Status indicators.
+tg-enabled: "✅"
+tg-disabled: "❌"
+
+# Welcome message sent when /start is used.
+# %chatId% - Telegram chat ID.
+tg-start: "Hello! Your Chat ID is: <code>%chatId%</code>\n\n<b>How to link your account:</b>\n1. Join the Minecraft server.\n2. If you are not linked, you will see a 10-character code in the kick message.\n3. Send this code to the bot here (e.g., <code>/mclink ABCDEFGHIJ</code> or just <code>ABCDEFGHIJ</code>).\n\n<b>Bot Commands:</b>\n/start - Show this help message and main menu\n/mclink &lt;code&gt; - Link your Minecraft account\n\n<b>Admin Commands (if authorized):</b>\n/players - List and manage online players\n/settings - Configure bot notification settings\n/rcon &lt;cmd&gt; - Execute a server console command (or just /&lt;cmd&gt;)\n/cancel - Cancel current interaction state"
+
+# Header for managing your own linked account.
+tg-me-menu: "Managing account: %player%"
+
+# Confirmation after blacklisting your own current IP.
+tg-blacklisted-self: "✅ Your current IP (%ip%) has been blacklisted for account %player%."
+
+# Error message if you have no linked accounts.
+tg-no-linked-accounts: "You have no linked accounts."
+
+# Header for selecting which account to manage.
+tg-select-account: "Select an account to manage:"
+
+# Header for selecting a player to view blacklisted IPs.
+tg-blacklist-players-menu: "Select a player to manage their blacklist:"
+
+# Header for the IP blacklist list for a player.
+tg-blacklist-ips-menu: "IP Blacklist for %player%:"
+
+# Success message after removing an IP from blacklist.
+tg-ip-removed: "✅ IP %ip% removed from blacklist for %player%"
+
+# Error when no blacklisted IPs are found.
+tg-no-blacklist-found: "No blacklisted IPs found."
+
+# Error when a specific player has no blacklisted IPs.
+tg-no-blacklist-player: "No blacklisted IPs for %player%."
+
+# Error when no approved IPs are found.
+tg-no-approved-ips: "No approved IPs found for %player%."
+
+# Label for permanent IPs in whitelist.
+tg-time-permanent: "Permanent"
+
+# Header for your own blacklist.
+tg-my-blacklist: "Your Blacklisted IPs (%player%):"
+
+# Header for your own whitelist.
+tg-my-whitelist: "Your Approved IPs (%player%):"
+
+# Success message after removing an IP from whitelist.
+tg-ip-removed-whitelist: "✅ IP %ip% removed from approved list for %player%"
+
+
+# --- Button Labels (Bot UI) ---
+
+tg-btn-kick: "🦵 Kick"
+tg-btn-ban: "🔨 Ban"
+tg-btn-msg: "💬 Message"
+tg-btn-back: "⬅️ Back"
+tg-btn-approve: "✅ Approve"
+tg-btn-deny: "❌ Deny"
+tg-btn-blacklist: "🚫 Blacklist IP"
+tg-btn-2fa-settings: "⚙️ 2FA Settings"
+tg-btn-default-2fa: "🛡️ Default 2FA"
+tg-btn-default-2fa-op: "OP Players"
+tg-btn-default-2fa-nonop: "Non-OP Players"
+tg-btn-mode-always: "Always"
+tg-btn-mode-session: "Session"
+tg-btn-mode-whitelist: "Whitelist"
+tg-btn-mode-disabled: "Disabled"
+tg-btn-server-status: "Server Start/Stop"
+tg-btn-join-leave: "Join/Leave"
+tg-btn-commands: "Commands"
+tg-btn-security: "Security Alerts"
+tg-btn-players: "👥 Players"
+tg-btn-settings: "⚙️ Settings"
+tg-btn-me: "👤 My Account"
+tg-btn-blacklist-admin: "🚫 IP Blacklist"
+tg-btn-kick-me: "🦵 Kick Me"
+tg-btn-blacklist-me: "🚫 Blacklist current IP & Kick"
+tg-btn-manage-blacklist: "🚫 My Blacklist"
+tg-btn-manage-whitelist: "✅ My Approved IPs"
+tg-btn-remove: "❌ Remove"
+
+# Internal language identifier. DO NOT EDIT.
+language-internal: "en"
